@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\VideosController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -48,6 +49,10 @@ Route::get('/auth/github/callback', [AuthentificationController::class, 'githubc
 Route::get('/auth/google/redirect', [AuthentificationController::class, 'googleredirect'])->name('googlelogin');
 Route::get('/auth/google/callback', [AuthentificationController::class, 'googlecallback']);
 
+// authentification by facebook
+Route::get('/auth/facebook/redirect', [AuthentificationController::class, 'facebookredirect'])->name('facebooklogin');
+Route::get('/auth/facebook/callback', [AuthentificationController::class, 'facebookcallback']);
+
 // // // //
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/', [FrontendController::class, 'index'])->name('frontend');
@@ -55,6 +60,8 @@ Route::get('/tutorial/{category_slug}', [FrontendController::class, 'viewCategor
 Route::get('/tutorial/{category_slug}/{post_slug}', [FrontendController::class, 'viewPost'])->name('viewPost');
 
 Route::get('/test', [FrontendController::class, 'zone'])->name('zone');
+Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+Route::post('/contact_send', [FrontendController::class, 'contact_send'])->name('contact_send');
 
 
 // comment
@@ -84,6 +91,14 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () { // M
     Route::get('/edit_post/{id}', [PostController::class, 'edit'])->name('edit_post');
     Route::put('/update_post/{id}', [PostController::class, 'update'])->name('update_post');
     Route::get('/delete_post/{id}', [PostController::class, 'destory'])->name('delete_post');
+
+    ////////****************** Video ADMIN **************////////////////////
+    Route::get('/videos', [VideosController::class, 'index'])->name('videos');
+    Route::get('/add-video', [VideosController::class, 'create_video'])->name('add-video');
+    Route::post('/add-video', [VideosController::class, 'store'])->name('store-video');
+    Route::get('/edit_video/{id}', [VideosController::class, 'edit'])->name('edit_video');
+    Route::put('/update_video/{id}', [VideosController::class, 'update'])->name('update_video');
+    Route::get('/delete_video/{id}', [VideosController::class, 'destory'])->name('delete_video');
 
      ////////****************** Users  **************////////////////////
      Route::get('/users', [UserController::class, 'index'])->name('users');

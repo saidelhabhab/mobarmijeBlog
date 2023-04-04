@@ -93,6 +93,50 @@ class AuthentificationController extends Controller
 
 
     }
+
+    /////////////////////////////////////////////////////////////
+
+      // authentification by facebook
+    public function facebookredirect(Request $request){
+
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    public function facebookcallback(Request $request){
+
+        $userdata = Socialite::driver('facebook')->user();
+
+        dd($userdata);
+
+        $user = User::where('email',$userdata->email)->where('auth_type','facebook')->first();
+
+        if($user)
+        {
+            //do login
+
+            Auth::login($user);
+            return redirect('/');
+        }
+        else
+        {
+            //do register
+
+            $uuid= Str::uuid()->toString(); // add uuid()
+
+            $user = new User();
+            $user->name = $userdata->name;
+            $user->email = $userdata->email;
+            $user->password = Hash::make($uuid.now());
+            $user->auth_type ='facebook';
+            $user->save();
+            Auth::login($user);
+
+            return redirect('/');
+        }
+
+
+
+    }
 }
 
 

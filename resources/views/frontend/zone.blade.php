@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<title>Onix Digital Marketing HTML5 Template</title>
+<title>test</title>
 
 <!-- Bootstrap core CSS -->
 <link href="{{ asset('new/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -38,9 +38,9 @@ https://templatemo.com/tm-565-onix-digital
 <div class="preloader-inner">
     <span class="dot"></span>
     <div class="dots">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span> S</span>
+    <span>A</span>
+    <span>I</span>
     </div>
 </div>
 </div>
@@ -58,7 +58,7 @@ https://templatemo.com/tm-565-onix-digital
         </a>
         <!-- ***** Logo End ***** -->
         <!-- ***** Menu Start ***** -->
-        <ul class="nav">
+        <ul class="nav d-none d-lg-block">
             <li class="scroll-to-section"><a href="{{route('zone')}}" class="active">Home</a></li>
             @php
             $categories = App\Models\Category::where('navbar_status','0')->where('status','0')->get();
@@ -68,11 +68,11 @@ https://templatemo.com/tm-565-onix-digital
                     <a href="{{url('tutorial/'.$cateitem->slug)}}">{{$cateitem->name}}</a>
                 </li>
             @endforeach
+
             <li class="scroll-to-section"><a href="#services">Services</a></li>
             <li class="scroll-to-section"><a href="#about">About</a></li>
             <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
             <li class="scroll-to-section"><a href="#video">Videos</a></li>
-            <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
             <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Contact Us Now</a></div></li>
         </ul>
         <a class='menu-trigger'>
@@ -97,15 +97,15 @@ https://templatemo.com/tm-565-onix-digital
         <div class="col-lg-6 align-self-center">
             <div class="owl-carousel owl-banner">
             <div class="item header-text">
-                <h6>Welcome to Onix Digital</h6>
-                <h2>Build <em>your website</em> the best in <span>SEO</span>?</h2>
-                <p>This is a professional looking HTML Bootstrap 5 website template brought to you by TemplateMo website.</p>
+                <h6>Welcome</h6>
+                <h2>Build <em>your website</em> By <span>Said ELHABHAB</span></h2>
+                <p>This is a professional looking HTML Bootstrap 5 website template brought to you by me.</p>
                 <div class="down-buttons">
                 <div class="main-blue-button-hover">
-                    <a href="#contact">Message Us Now</a>
+                    <a href="#contact">Message me Now</a>
                 </div>
                 <div class="call-button">
-                    <a href="#"><i class="fa fa-phone"></i> 010-020-0340</a>
+                    <a href="#"><i class="fa fa-phone"></i> +2126-03676440</a>
                 </div>
                 </div>
             </div>
@@ -214,7 +214,7 @@ https://templatemo.com/tm-565-onix-digital
     <div class="col-lg-6">
         <div class="section-heading">
         <h2>Grow your website with our <em>SEO Tools</em> &amp; <span>Project</span> Management</h2>
-        <p>You can browse free HTML templates on Too CSS website. Visit the website and explore latest website templates for your projects.</p>
+        <p>You can browse the website and explore the latest websites for your projects.</p>
         <div class="row">
             <div class="col-lg-4">
             <div class="fact-item">
@@ -505,114 +505,6 @@ https://templatemo.com/tm-565-onix-digital
 </div>
 </div>
 
-<div id="video" class="our-videos section">
-<div class="videos-left-dec">
-    <img src="{{asset('new/assets/images/videos-left-dec.png')}}" alt="">
-</div>
-<div class="videos-right-dec">
-    <img src="{{asset('new/assets/images/videos-right-dec.png')}}" alt="">
-</div>
-<div class="container">
-    <div class="row">
-    <div class="col-lg-12">
-        <div class="naccs">
-        <div class="grid">
-            <div class="row">
-            <div class="col-lg-8">
-                <ul class="nacc">
-                <li class="active">
-                    <div>
-                    <div class="thumb">
-                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/JynGuQx4a1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <div class="overlay-effect">
-                        <a href="#"><h4>Project One</h4></a>
-                        <span>SEO &amp; Marketing</span>
-                        </div>
-                    </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                    <div class="thumb">
-                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/RdJBSFpcO4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <div class="overlay-effect">
-                        <a href="#"><h4>Second Project</h4></a>
-                        <span>Advertising &amp; Marketing</span>
-                        </div>
-                    </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                    <div class="thumb">
-                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/ZlfAjbQiL78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <div class="overlay-effect">
-                        <a href="#"><h4>Project Three</h4></a>
-                        <span>Digital &amp; Marketing</span>
-                        </div>
-                    </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                    <div class="thumb">
-                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/mx1WseE7-0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <div class="overlay-effect">
-                        <a href="#"><h4>Fourth Project</h4></a>
-                        <span>SEO &amp; Advertising</span>
-                        </div>
-                    </div>
-                    </div>
-                </li>
-                </ul>
-            </div>
-            <div class="col-lg-4">
-                <div class="menu">
-                <div class="active">
-                    <div class="thumb">
-                    <img src="{{asset('new/assets/images/video-thumb-01.png')}}" alt="">
-                    <div class="inner-content">
-                        <h4>Project One</h4>
-                        <span>SEO &amp; Marketing</span>
-                    </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="thumb">
-                    <img src="{{asset('new/assets/images/video-thumb-02.png')}}" alt="">
-                    <div class="inner-content">
-                        <h4>Second Project</h4>
-                        <span>Advertising &amp; Marketing</span>
-                    </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="thumb">
-                    <img src="{{asset('new/assets/images/video-thumb-03.png')}}" alt="Marketing">
-                    <div class="inner-content">
-                        <h4>Project Three</h4>
-                        <span>Digital &amp; Marketing</span>
-                    </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="thumb">
-                    <img src="{{asset('new/assets/images/video-thumb-04.png')}}" alt="SEO Work">
-                    <div class="inner-content">
-                        <h4>Fourth Project</h4>
-                        <span>SEO &amp; Advertising</span>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </div>
-    </div>
-</div>
-</div>
 
 <div id="contact" class="contact-us section">
 <div class="container">
@@ -621,7 +513,7 @@ https://templatemo.com/tm-565-onix-digital
         <div class="section-heading">
         <h2>Feel free to <em>Contact</em> us via the <span>HTML form</span></h2>
         <div id="map">
-            <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="360px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13190.823358534495!2d-6.628232575745663!3d34.25604897432207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda75976848e63cb%3A0xbab8bbdcdda49e50!2sMosqu%C3%A9e%20El%20Houda!5e0!3m2!1sen!2sma!4v1676066281518!5m2!1sen!2sma" width="100%" height="360px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
         </div>
         <div class="info">
             <span><i class="fa fa-phone"></i> <a href="#">010-020-0340<br>090-080-0760</a></span>
@@ -663,10 +555,10 @@ https://templatemo.com/tm-565-onix-digital
     </div>
 </div>
 <div class="contact-dec">
-    <img src="assets/images/contact-dec.png" alt="">
+    <img src="{{ asset('new/assets/images/contact-dec.png')}}" alt="">
 </div>
 <div class="contact-left-dec">
-    <img src="assets/images/contact-left-dec.png" alt="">
+    <img src="{{ asset('new/assets/images/contact-left-dec.png')}}" alt="">
 </div>
 </div>
 
@@ -680,7 +572,7 @@ https://templatemo.com/tm-565-onix-digital
     <div class="col-lg-3">
         <div class="about footer-item">
         <div class="logo">
-            <a href="#"><img src="assets/images/logo.png" alt="Onix Digital TemplateMo"></a>
+            <a href="#"><img src="{{ asset('new/assets/images/logo.png')}}" alt="Onix Digital TemplateMo"></a>
         </div>
         <a href="#">info@company.com</a>
         <ul>

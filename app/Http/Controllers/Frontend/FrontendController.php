@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Settings;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Settings;
+use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\ContactRequest;
 
 class FrontendController extends Controller
 {
@@ -60,6 +63,28 @@ class FrontendController extends Controller
         {
             redirect('/');
         }
+
+    }
+
+
+    public function contact(){
+
+        return view('frontend.contact');
+
+    }
+
+    public function contact_send(ContactRequest $request){
+
+
+          $datalis=[
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+        ];
+
+        //dd($datalis);
+        Mail::to('saidelhabhab@gmail.com')->send(new ContactMail($datalis));
+        return back()->with('message_sent','Your Message has been sent successfully!');
 
     }
 }

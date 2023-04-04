@@ -1,41 +1,76 @@
+<footer class="bg-dark mt-3 ">
 
-<div class="py-5 bg-dark text-white">
-    <div class="container">
+    <div class="container " style="padding-top: 20px">
         <div class="row">
-            <div class="col-md-6">
-                <div class="underline" > </div>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos maiores ullam fuga quisquam minima culpa porro adipisci veritatis, ab quam nobis atque et dolore similique cumque ipsa eius aliquam necessitatibus?
-                </p>
+        <div class="col-lg-3  text-center">
+            <div class="about footer-item">
+            @php
+                $setting = App\Models\Settings::find(1);
+            @endphp
+
+            @if ($setting)
+            <div class="logo">
+                <img src="{{asset('Image/setting/'.$setting->favicon)}}"   alt="logo">
             </div>
-            <div class="col-md-3">
-                <h5>Quick link</h5>
-                <div class="underline" > </div>
-                <div> <a href="" class="text-white"> Home</a></div>
-                <div> <a href="" class="text-white"> About us</a></div>
-                <div> <a href="" class="text-white"> Contact us</a></div>
-                <div> <a href="" class="text-white"> Need Promotion ?</a></div>
-            </div>
-            <div class="col-md-3">
-                <h5>Follow us On </h5>
-                <div class="underline" > </div>
-                <div> <a href="" class="text-white"> Facebook <i class="fa fa-facebook-official" aria-hidden="true"></i></a></div>
-                <div> <a href="" class="text-white"> Twitter <i class="fa fa-twitter" aria-hidden="true"></i></a></div>
-                <div> <a href="" class="text-white"> Instagram<i class="fa fa-instagram" aria-hidden="true"></i></a></div>
-                <div> <a href="" class="text-white"> Youtube <i class="fa fa-youtube" aria-hidden="true"></i></a></div>
+            @endif
+            <a href="https://gmail.com">saidelhabhab@gmail.com</a>
+
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
             </div>
         </div>
+        <div class="col-lg-3">
+            <div class="services footer-item">
+            <h4 class="text-primary">Services</h4>
+            <div class="underline" > </div>
+            <ul>
+                <li><a href="#">SEO Development</a></li>
+                <li><a href="#">Business Growth</a></li>
+                <li><a href="#">Social Media Managment</a></li>
+                <li><a href="#">Website Optimization</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="community footer-item">
+            <h4 class="text-primary">Community</h4>
+            <div class="underline" > </div>
+            <ul>
+                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">Business Ideas</a></li>
+                <li><a href="#">Website Checkup</a></li>
+                <li><a href="#">Page Speed Test</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="subscribe-newsletters footer-item">
+            <h4 class="text-primary">Subscribe Newsletters</h4>
+            <div class="underline" > </div>
+            <p>Get our latest news and ideas to your inbox</p>
+            <form action="#" method="get">
+                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+                <button type="submit" id="form-submit" class="main-button "><i class="fa fa-paper-plane-o"></i></button>
+            </form>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="copyright text-center">
+                <p class="mb-0 ">
+                    &copy; Copyright at <a href="#" class="text-decoration-none"> Said ELHABHAB </a>
+                    All right reserved.
+                    Designed and Developed by Said ELHABHAB {{date('Y')}}
 
+                </p>
+            </div>
+        </div>
+        </div>
     </div>
-</div>
 
-<div class="py-2 bg-light">
-    <div class="container text-center">
-        <p class="mb-0 ">
-            &copy; Copyright at <a href="#" class="text-decoration-none"> Said ELHABHAB </a>
-            All right reserved.
-            Designed and Developed by Said ELHABHAB {{date('Y')}}
 
-        </p>
-    </div>
-</div>
+    </footer>
+
