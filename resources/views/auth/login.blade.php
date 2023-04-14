@@ -31,10 +31,10 @@
         <div class="container-login100">
             <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
 
-                @if (session('message'))
-                <div class="alert alert-warning mb-3 mt-4">
-                    {{ session('message') }}
-                </div>
+                @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
                 @endif
 
                 <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">

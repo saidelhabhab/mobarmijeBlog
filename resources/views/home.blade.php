@@ -13,7 +13,7 @@
             <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading">
-                <h2> <em>Welcome </em> {{ Auth::user()->name }}to our  <span>siteweb </span> page</h2>
+                <h2> <em>Welcome </em> {{ Auth::user()->name }} <br>  to our  <span>siteweb </span> </h2>
                 <div class="main-blue-button-hover mt-3">
                     <a href="{{route('contact')}}">Contact us </a>
                 </div>

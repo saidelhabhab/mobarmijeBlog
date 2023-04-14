@@ -68,15 +68,30 @@
                     </li>
                 @endforeach
 
-                <li class="scroll-to-section"><a href="#services">Services</a></li>
-                <li class="scroll-to-section"><div class="main-red-button-hover"><a href="{{ route('contact')}}">Contact Us Now</a></div></li>
-     <!--           <li>
+                <li class="scroll-to-section"><a href="{{ route('contact')}}">Contact</a></li>
+
+                 @if (Route::has('login'))
+                    @auth
+                    <li class="scroll-to-section"><div class="main-red-button-hover">
+                        <a href="{{route('logout')}}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">Logout</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+                            @csrf
+                        </form></div>
+                    </li>
+                    @else
+                    <li class="scroll-to-section"><div class="main-red-button-hover"><a href="{{ route('login')}}">Log In</a></div></li>
+
+                   @endauth
+
+                 @endif
+        <!--    <li>
                     <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Logout</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
-                </li>    -->
+                </li> -->
             </ul>
             <a class='menu-trigger'>
                 <span>Menu</span>
