@@ -19,6 +19,8 @@
                     <div class="card-body">
                         <a href="{{url('tutorial/'.$category->slug.'/'.$postitem->slug)}}" class="text-decoration-none"><h2 class="post-heading">{{$postitem->name}}</h2>
                         </a>
+                        <br>
+
                         <h6> Post on : {{$postitem->created_at->format('d-m-Y') }}
                             <span class="ms-3"> Create by: {{$postitem->user->name }}</span>
                         </h6>

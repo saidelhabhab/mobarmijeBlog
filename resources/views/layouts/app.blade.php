@@ -12,6 +12,7 @@
     <meta name="keyword" content="@yield('meta_keyword')">
     <meta name="author" content="Said ELHABHAB">
 
+
     @php
      $setting = App\Models\Settings::find(1);
 

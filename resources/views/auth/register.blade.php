@@ -5,6 +5,7 @@
     <title>Register</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{ asset('loginpublic/images/icons/favicon.ico')}}"/>
 <!--===============================================================================================-->
@@ -23,6 +24,34 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('loginpublic/css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('loginpublic/css/main.css')}}">
 <!--===============================================================================================-->
+
+   <!-- Include script -->
+   <script type="text/javascript">
+    function callbackThen(response) {
+
+      // read Promise object
+      response.json().then(function(data) {
+        console.log(data);
+        if(data.success && data.score >= 0.6) {
+           console.log('valid recaptcha');
+        } else {
+           document.getElementById('contactForm').addEventListener('submit', function(event) {
+              event.preventDefault();
+              alert('recaptcha error');
+           });
+        }
+      });
+    }
+
+    function callbackCatch(error){
+       console.error('Error:', error)
+    }
+    </script>
+
+    {!! htmlScriptTagJsApi([
+       'callback_then' => 'callbackThen',
+       'callback_catch' => 'callbackCatch',
+    ]) !!}
 </head>
 <body>
 
@@ -144,11 +173,11 @@
 
                     <div class="text-center w-full p-t-115">
                         <span class="txt1">
-                            Not a member?
+                            is a member?
                         </span>
 
-                        <a class="txt1 bo1 hov1" href="{{route('register')}}">
-                            Sign up now
+                        <a class="txt1 bo1 hov1" href="{{route('login')}}">
+                            Sign in now
                         </a>
                     </div>
                 </form>

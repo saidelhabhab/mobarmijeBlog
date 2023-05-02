@@ -20,6 +20,16 @@
 
                 <div class="card card-shadow mt-4">
                     <div class="card-body post-description">
+                        <div class="row">
+                            <div class="thumb text-center">
+                                <iframe width="60%"  height="300px" src="{{  $post->yt_iframe }}" title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+
+                            </div>
+                        </div>
+<br>
                         {!! $post->description!!}
                     </div>
                 </div>

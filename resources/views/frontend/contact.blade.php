@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="col-lg-5 align-self-center">
-            
+
             @if(Session::has('message_sent'))
             <div class="alert alert-success">
                 {{ Session::get('message_sent') }}

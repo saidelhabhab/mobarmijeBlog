@@ -60,6 +60,7 @@ Route::get('/tutorial/{category_slug}', [FrontendController::class, 'viewCategor
 Route::get('/tutorial/{category_slug}/{post_slug}', [FrontendController::class, 'viewPost'])->name('viewPost');
 
 Route::get('/test', [FrontendController::class, 'zone'])->name('zone');
+Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::post('/contact_send', [FrontendController::class, 'contact_send'])->name('contact_send');
 

@@ -14,6 +14,14 @@ use App\Http\Requests\ContactRequest;
 class FrontendController extends Controller
 {
 
+    public function about(){
+        $all_Post = Post::where('status','0')->orderBy('created_at','DESC')->take(15)->get();
+        $all_Catogory = Category::where('status','0')->get();
+      //  dd( $all_Post);
+        return view('frontend.About.about',compact('all_Post','all_Catogory'));
+    }
+
+
     public function zone(){
         $all_Post = Post::where('status','0')->orderBy('created_at','DESC')->take(15)->get();
         $all_Catogory = Category::where('status','0')->get();

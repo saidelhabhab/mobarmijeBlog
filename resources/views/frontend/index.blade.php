@@ -250,12 +250,17 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4> Said ELHABHAB</h4>
+                <h4> <b> Said EL-HABHAB  </b></h4>
                 <div class="underline">
                 </div>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum praesentium iusto nesciunt dolores obcaecati culpa dolore quae quaerat, tempora itaque laborum tenetur? Aut voluptatem voluptate, natus earum culpa quasi fugit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum praesentium iusto nesciunt dolores obcaecati culpa dolore quae quaerat, tempora itaque laborum tenetur? Aut voluptatem voluptate, natus earum culpa quasi fugit.
-                    </p>
+
+                <ul>
+                    <li> <b> Web developer  </b></li>
+                    <li> <b>Freelancer </b></li>
+                    <li> <b>Mobile developer </b></li>
+                    <li> <b>Graphic designer </b> </li>
+                  </ul>
+
             </div>
         </div>
     </div>

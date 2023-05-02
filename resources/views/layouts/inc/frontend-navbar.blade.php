@@ -69,6 +69,7 @@
                 @endforeach
 
                 <li class="scroll-to-section"><a href="{{ route('contact')}}">Contact</a></li>
+                <li class="scroll-to-section"><a href="{{ route('about')}}">About-us</a></li>
 
                  @if (Route::has('login'))
                     @auth

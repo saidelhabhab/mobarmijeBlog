@@ -4,6 +4,7 @@
     <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{ asset('loginpublic/images/icons/favicon.ico')}}"/>
 <!--===============================================================================================-->
@@ -22,6 +23,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('loginpublic/css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('loginpublic/css/main.css')}}">
 <!--===============================================================================================-->
+
+
 </head>
 <body>
 
@@ -72,6 +75,12 @@
                             </span>
                         @enderror
                     </div>
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+                        <strong>Google recaptcha :</strong>
+                        {!! NoCaptcha::renderJs() !!}
+                        {!! NoCaptcha::display() !!}
+                      </div>
 
 
                     <div class="contact100-form-checkbox m-l-4">
